@@ -1,0 +1,96 @@
+html, body{
+    max-width: 100dvw;
+    height: 100dvh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    min-width: 100dvw;
+    max-width: 100dvw;
+    max-height: 4.7rem;
+    padding: 1.2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-o {
+    max-width: 11.9rem;
+    max-height: 2.8rem;
+}
+
+.secciones {
+    max-height: 2.8rem;
+    width: auto;
+    margin-left: 1rem;
+}
+
+.secc1, .secc2, .secc3, .secc4, .secc5 {
+    max-height: 2.8rem;
+    width: auto;
+    padding: .75rem 1rem;
+}
+
+.fb, .in {
+    max-height: 2.5rem;
+    width: auto;
+    padding: .75rem .75rem;
+}
+
+/*---------------------------------------------------------------*/
+
+.barra-contacto {
+    background-color: #1d1c1c;
+    width: 100dvw;
+    min-height: 3.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.img-tel1, .img-tel2, .img-correo {
+    max-width: 2.1rem;
+    max-height: 2.1rem;
+}
+
+.contacto1, .contacto2, .contacto3 {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+/*-------------------------------------------------------------------*/
+
+.bloque1 {
+    width: 100dvw;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+}
+
+.carrusel {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr);
+    flex: 1;
+    min-height: 0;
+}
+
+.carr1, .carr2, .carr3, .carr4, .carr5 {
+    grid-row: 1;
+    height: 100%;
+    min-height: 0;
+}
