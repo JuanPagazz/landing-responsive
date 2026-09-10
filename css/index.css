@@ -1,18 +1,24 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    font-family: sans-serif;
 }
 
 /* Estilos generales */
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -105,7 +111,7 @@ header {
     object-fit: cover;
 }
 
-@media (max-width:845px) {
+@media (max-width:905px) {
     .redes {
         display: none;
     }
@@ -140,7 +146,11 @@ header {
         opacity: 0;
         visibility: hidden;
 
+        position: fixed;
+        inset: 0 0 0 auto;
+        height: 100dvh;
         width: 50%;
+
         background-color: #1c1c1c;
         display: flex;
         flex-direction: column;
@@ -309,4 +319,136 @@ header {
 
 .punto.active {
     background-color: #f9792d;
+}
+
+/* Carrusel manual y automatico responsive */
+
+.contacto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: start;
+}
+
+.barra-contacto {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e1e;
+    flex-shrink: 0;
+}
+
+.barra-contacto h2 {
+    color: white;
+    font-size: clamp(1.4rem, 2.4vw, 3rem);
+}
+
+.video {
+    width: 85%;
+    max-height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.video video {
+    padding: 1rem 0;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(50% 0%,92.5% 25%, 92.5% 75%, 50% 100%, 7.5% 75%, 7.5% 25%);
+    object-fit: fill;
+}
+
+.texto-contacto {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: start;
+    gap: 1.3rem;
+}
+
+.texto-contacto h2 {
+    text-align: center;
+    font-size: clamp(1.3rem, 5.2vw, 4rem);
+}
+
+.texto-contacto p {
+    text-align: center;
+    font-size: clamp(.9rem, 3.4vw, 3rem);
+    line-height: clamp(1, 1.3, 1.5);
+    padding: 2px;
+}
+
+.texto-decorativo {
+    width: 100%;
+    background-color: #f9792d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-decorativo h2 {
+    font-size: clamp(1.3rem, 5.2vw, 4rem);
+    color: #f9792d;
+    padding: .6rem;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: .4px;
+}
+
+.texto-contacto ul {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: start;
+    justify-content: center;
+}
+
+.texto-contacto li {
+    font-size: clamp(.9rem, 3.4vw, 3rem);
+}
+
+.texto-contacto button {
+    background-color: #344264;
+    border: none;
+    border-radius: 1rem;
+    padding: clamp(.8rem, 2.8vw, 2rem);
+    color: white;
+    cursor: pointer;
+    box-shadow: inset -7px -5px rgba(0, 0, 0, .5);
+    font-size: clamp(.8rem, 2.8vw, 2rem);
+}
+
+.texto-contacto button:hover {
+    filter: brightness(70%);
+}
+
+.contacto small {
+    margin-top: .4rem;
+    color: #666;
+    font-size: clamp(.7rem, 2.4vw, 1.8rem);
+}
+
+.lineaU {
+    position: absolute;
+    top: 4%;
+    left: 0%;
+    width: 15%;
+    height: 4px;
+    background-color: #f9792d;
+    z-index: 10;
+}
+
+.lineaD {
+    position: absolute;
+    bottom: 4%;
+    left: 84%;
+    width: 15%;
+    height: 4px;
+    background-color: #f9792d;
+    z-index: 2;
 }
