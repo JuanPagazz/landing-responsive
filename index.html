@@ -12,9 +12,9 @@
 <body>
     <header>
         <img src="assets/pglogo_nf.png" class="logo" alt="Logo">
-        <button class="abrir-menu" id="abrir-menu" type="button">☰</button>
+        <button class="abrir-menu" id="abrir-menu" type="button" aria-label="Abrir menú">☰</button>
         <nav class="nav" id="nav">
-            <button class="cerrar-menu" id="cerrar-menu" type="button">✕</button>
+            <button class="cerrar-menu" id="cerrar-menu" type="button" aria-label="Cerrar menú">✕</button>
             <ul class="nav-list">
                 <li><a href="#carrusel">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -32,37 +32,37 @@
             <a href="https://www.linkedin.com/company/pgpublicidad/" target="blank_"><img src="assets/linkedin.png" class="in" alt="Linkedin"></a>
         </div>
     </header>
-    <section class="carrusel" id="carrusel">
+    <section class="carrusel" id="carrusel" tabindex="0">
         <div class="carrusel-tarjetas" id="carrusel-tarjetas">
             <div class="tarjetas" id="tarjetas">
-            <img src="assets/promocionales2.jpeg" alt="Imagen 1">
+            <img src="assets/promocionales2.jpeg" alt="Articulos promocionales">
             <h2>ARTICULOS PROMOCIONALES</h2>
             <p>Regalos corporativos que<br> posicionan tu marca...</p>
-            <button id="btnvermas" aria-label="Ver mas">Ver más</button>
+            <button id="btnvermas" aria-label="Ver mas" tabindex="-1">Ver más</button>
             </div>
             <div class="tarjetas" id="tarjetas">
-            <img src="assets/uniformes2.jpeg" alt="Imagen 2">
+            <img src="assets/uniformes2.jpeg" alt="Uniformes empresariales">
             <h2>UNIFORMES EMPRESARIALES</h2>
             <p>Imagen profesional y funcional...</p>
-            <button id="btnvermas" aria-label="Ver mas">Ver más</button>
+            <button id="btnvermas" aria-label="Ver mas" tabindex="-1">Ver más</button>
             </div>
             <div class="tarjetas" id="tarjetas">
-            <img src="assets/imprenta2.jpeg" alt="Imagen 3">
+            <img src="assets/imprenta2.jpeg" alt="Imprenta empresarial">
             <h2>IMPRENTA EMPRESARIAL</h2>
             <p>Material corporativo con alto<br> impacto visual...</p>
-            <button id="btnvermas" aria-label="Ver mas">Ver más</button>
+            <button id="btnvermas" aria-label="Ver mas" tabindex="-1">Ver más</button>
             </div>
             <div class="tarjetas" id="tarjetas">
-            <img src="assets/lonas2.jpeg" alt="Imagen 4">
+            <img src="assets/lonas2.jpeg" alt="Lonas y viniles">
             <h2>LONAS Y VINILES</h2>
             <p>Visibilidad en gran formato...</p>
-            <button id="btnvermas" aria-label="Ver mas">Ver más</button>
+            <button id="btnvermas" aria-label="Ver mas" tabindex="-1">Ver más</button>
             </div>
             <div class="tarjetas" id="tarjetas">
-            <img src="assets/proyectos_especiales2.jpeg" alt="Imagen 5">
+            <img src="assets/proyectos_especiales2.jpeg" alt="Proyectos especiales">
             <h2>PROYECTOS ESPECIALES</h2>
             <p>Ideas hechas realidad...</p>
-            <button id="btnvermas" aria-label="Ver mas">Ver más</button>
+            <button id="btnvermas" aria-label="Ver mas" tabindex="-1">Ver más</button>
             </div>
         </div>
         <div class="carrusel-flechas">
@@ -105,6 +105,68 @@
             </ul>
             <a class="cotiza" target="_blank" href="mailto:contacto@pgarza.com.mx">COTIZA TU PROYECTO</a>
             <small>Respuesta en menos de 24 hrs.</small>
+        </div>
+    </section>
+    <section class="temporada">
+        <div class="linea-temp"></div>
+        <p>CATÁLOGOS DE TEMPORADA</p>
+        <h2>Fechas especiales<br><span style="color: #f9792d;">productos únicos</span></h2>
+        <div class="catalogos">
+            <div class="catalogo">
+                <img src="assets/madre.jpg" alt="Dia de las madres">
+                <div class="degradado-temp"></div>
+                <h3 class="titulo">Dia de las Madres</h3>
+                <p class="descripcion">Detalles únicos para mamá</p>
+                <a href="#" class="vermas-catalogos">Ver más →</a>
+            </div>
+            <div class="catalogo">
+                <img src="assets/padre.jpg" alt="Dia del padre">
+                <div class="degradado-temp"></div>
+                <h3 class="titulo">Dia del Padre</h3>
+                <p class="descripcion">Articulos promocionales pensados para papá</p>
+                <a href="#" class="vermas-catalogos">Ver más →</a>
+            </div>
+            <div class="catalogo">
+                <img src="assets/mujer.jpg" alt="Dia de la mujer">
+                <div class="degradado-temp"></div>
+                <h3 class="titulo">Dia de la Mujer</h3>
+                <p class="descripcion">Reconociendo el valor y esfuerzo de las mujeres</p>
+                <a href="#" class="vermas-catalogos">Ver más →</a>
+            </div>
+            <div class="catalogo">
+                <img src="assets/agendas.jpg" alt="Agendas 2027">
+                <div class="degradado-temp"></div>
+                <h3 class="titulo">Agendas 2027</h3>
+                <p class="descripcion">Tu marca presente los 365 días del año</p>
+                <a href="#" class="vermas-catalogos">Ver más →</a>
+            </div>
+            <div class="catalogo">
+                <img src="assets/nino.jpg" alt="Dia del niño">
+                <div class="degradado-temp"></div>
+                <h3 class="titulo">Dia del Niño</h3>
+                <p class="descripcion">Regalos personalizados para los más pequeños</p>
+                <a href="#" class="vermas-catalogos">Ver más →</a>
+            </div>
+            <div class="catalogo">
+                <img src="assets/pride.jpg" alt="Pride">
+                <div class="degradado-temp"></div>
+                <h3 class="titulo">Pride</h3>
+                <p class="descripcion">Coleccion inclusiva para celebrar con orgullo</p>
+                <a href="#" class="vermas-catalogos">Ver más →</a>
+            </div>
+            <div class="catalogo">
+                <img src="assets/navidad.jpg" alt="Navidad">
+                <div class="degradado-temp"></div>
+                <h3 class="titulo">Navidad</h3>
+                <p class="descripcion">Lleva el espiritu en tu empresa</p>
+                <a href="#" class="vermas-catalogos">Ver más →</a>
+            </div>
+            <div class="catalogo">
+                <img src="assets/ejecutivos.jpg" alt="Regalos ejecutivos">
+                <div class="degradado-temp"></div>
+                <h3 class="titulo">Regalos ejecutivos</h3>
+                <p class="descripcion">Articulos promocionales de uso diario para tu escritorio</p>
+                <a href="#" class="vermas-catalogos">Ver más →</a></div>
         </div>
     </section>
     <script src="js/index.js"></script>

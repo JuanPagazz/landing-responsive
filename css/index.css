@@ -183,7 +183,7 @@ header {
 
 }
 
-/* header responsive */
+/* ---------------------------------------------------------------------------------------------- */
 
 .carrusel {
     width: 100%;
@@ -322,7 +322,7 @@ header {
     background-color: #f9792d;
 }
 
-/* Carrusel manual y automatico responsive */
+/* ------------------------------------------------------------------------------------------ */
 
 .contacto {
     width: 100%;
@@ -331,6 +331,7 @@ header {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: start;
+    padding-bottom: 1rem;
 }
 
 .barra-contacto {
@@ -510,4 +511,124 @@ header {
     .barra-contacto {
         height: 108px;
     }
+
+    .lineaU {
+        left: 2%;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+.temporada {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.linea-temp {
+    width: 20%;
+    height: 4px;
+    background-color: #f9792d;
+    position: absolute;
+    top: 0%;
+}
+
+.temporada p {
+    padding: 1rem 0;
+    letter-spacing: 0.15em;
+    font-size: clamp(.95rem, 3.4vw, 2.8rem);
+    color: #f9792d;
+    font-weight: 700;
+}
+
+.temporada h2 {
+    text-align: center;
+    padding: 0 0 1rem 0;
+    font-size: clamp(1.4rem, 5.2vw, 3.8rem);
+}
+
+.catalogos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    justify-items: center;
+    gap: 1rem;
+}
+
+.catalogo {
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalogo img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 9 / 12;
+    border-radius: 1.6rem;
+    filter: brightness(70%);
+}
+
+.degradado-temp {
+    position: absolute;
+    inset: 0px;
+    border-radius: 1.6rem;
+    background: linear-gradient(to top, rgba(30,12,0,0.9) -10%, rgba(249,121,45,0.45) 35%, rgba(249,121,45,0) 90%);
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.catalogo:hover .degradado-temp {
+    opacity: 1;
+}
+
+.catalogo h3, .catalogo p, .catalogo a {
+    position: absolute;
+    color: white;
+}
+
+.catalogo h3 {
+    left: 5%;
+    bottom: 15%;
+    transition: all 0.4s ease;
+}
+
+.catalogo:hover h3 {
+    bottom: 22%;
+}
+
+.catalogo p {
+    left: 5%;
+    bottom: 10%;
+    font-size: .8rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40%);
+    transition: all 0.4s ease;
+}
+
+.catalogo:hover p {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.catalogo a {
+    left: 5%;
+    bottom: 5%;
+    text-decoration: none;
+    border-bottom: 1px solid #f9792d;
+    padding-bottom: 1px;
+    transition: all 0.2s ease;
+}
+
+.catalogo a:hover {
+    color: black;
 }
