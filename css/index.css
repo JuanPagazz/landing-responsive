@@ -553,7 +553,7 @@ header {
 .catalogos {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     justify-items: center;
     gap: 1rem;
 }
@@ -598,6 +598,7 @@ header {
     left: 5%;
     bottom: 15%;
     transition: all 0.4s ease;
+    font-size: clamp(1.1rem, 1.25rem, 1.4rem);
 }
 
 .catalogo:hover h3 {
@@ -606,12 +607,13 @@ header {
 
 .catalogo p {
     left: 5%;
-    bottom: 10%;
-    font-size: .8rem;
+    bottom: 7.5%;
+    font-size: clamp(.8rem, .9rem, 1rem);
     opacity: 0;
     visibility: hidden;
     transform: translateY(40%);
     transition: all 0.4s ease;
+    font-weight: 100;
 }
 
 .catalogo:hover p {
@@ -622,7 +624,7 @@ header {
 
 .catalogo a {
     left: 5%;
-    bottom: 5%;
+    bottom: 4%;
     text-decoration: none;
     border-bottom: 1px solid #f9792d;
     padding-bottom: 1px;
@@ -631,4 +633,54 @@ header {
 
 .catalogo a:hover {
     color: black;
+}
+
+@media (min-width: 950px) {
+    .temporada h2 {
+        font-size: clamp(2rem, 3.6vw, 3rem);
+    }
+
+    .temporada p {
+        font-size: clamp(.95rem, 3vw, 1.4rem);
+    }
+
+    .catalogo p {
+        left: 5%;
+        bottom: 8.5%;
+        font-size: 1rem;
+        font-weight: 100;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(40%);
+        transition: all 0.4s ease;
+    }
+
+    .catalogo:hover p {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .linea-temp {
+        width: 0;
+        height: 0;
+    }
+
+    .catalogo h3 {
+        left: 5%;
+        bottom: 15%;
+        transition: all 0.4s ease;
+    }
+
+    .catalogo:hover h3 {
+        bottom: 25%;
+    }
+
+    .catalogos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    justify-items: center;
+    gap: 1rem;
+    }
 }
