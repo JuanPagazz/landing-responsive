@@ -9,11 +9,12 @@ https://juanpagazz.github.io/landing-responsive/
 
 # Technologies
 - HTML
-- CSS (Responsive, Mobile-first, Flexblox,)
+- CSS (Responsive, Mobile-first, Flexblox, Grid, etc...)
 - JavaScript
 - Git & Github
 
 # Structure
+```text
 /landing-responsive
     index.html      # Principal page and principal sections of the page
     /css
@@ -21,9 +22,9 @@ https://juanpagazz.github.io/landing-responsive/
     /js
         index.js    # Logic of the principla page
     /assets         # All images, videos and favicon of the page
-
+```
 # Learnign
-- Organization of a project
+- Project Organization
 - Use of commits & push and how to describe it
 - Css responsive
 - Think how to create styles for a mobile-first page
