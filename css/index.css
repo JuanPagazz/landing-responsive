@@ -635,6 +635,94 @@ header {
     color: black;
 }
 
+.btnVerCat {
+    color: white;
+    background-color: #f9792d;
+    border-radius: 1rem;
+    padding: clamp(.8rem, 2.8vw, 1.8rem);
+    border: none;
+    font-size: clamp(.8rem, 2.8vw, 1.8rem);
+    cursor: pointer;
+}
+
+.btnVerMenosCat {
+    color: #f9792d;
+    background-color: none;
+    border-color: #f9792d;
+    border-radius: 1rem;
+    padding: clamp(.8rem, 2.8vw, 1.8rem);
+    font-size: clamp(.8rem, 2.8vw, 1.8rem);
+    cursor: pointer;
+    display: none;
+}
+
+.catalogoVer {
+    width: 80%;
+    position: relative;
+    display: none;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalogoVer img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 9 / 12;
+    border-radius: 1.6rem;
+    filter: brightness(70%);
+}
+
+.catalogoVer:hover .degradado-temp {
+    opacity: 1;
+}
+
+.catalogoVer h3, .catalogoVer p, .catalogoVer a {
+    position: absolute;
+    color: white;
+}
+
+.catalogoVer h3 {
+    left: 5%;
+    bottom: 15%;
+    transition: all 0.4s ease;
+    font-size: clamp(1.1rem, 1.25rem, 1.4rem);
+}
+
+.catalogoVer:hover h3 {
+    bottom: 22%;
+}
+
+.catalogoVer p {
+    left: 5%;
+    bottom: 7.5%;
+    font-size: clamp(.8rem, .9rem, 1rem);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40%);
+    transition: all 0.4s ease;
+    font-weight: 100;
+}
+
+.catalogoVer:hover p {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.catalogoVer a {
+    left: 5%;
+    bottom: 4%;
+    text-decoration: none;
+    border-bottom: 1px solid #f9792d;
+    padding-bottom: 1px;
+    transition: all 0.2s ease;
+}
+
+.catalogoVer a:hover {
+    color: black;
+}
+
 @media (min-width: 950px) {
     .temporada h2 {
         font-size: clamp(2rem, 3.6vw, 3rem);

@@ -10,7 +10,7 @@ btncerrar.addEventListener("click", () => {
     nav.classList.remove("active")
 })
 
-/* Menu hamburguesa */
+/* ------------------------------------------------------------------------------------------------------- */
 
 const flechaI = document.getElementById("flecha-izquierda")
 const flechaD = document.getElementById("flecha-derecha")
@@ -89,4 +89,24 @@ function reiniciarContador() {
 
 reiniciarContador()
 
-/* carrusel */
+/* ------------------------------------------------------------------------------------------------------- */
+
+const btnVerMas = document.getElementById("verCat")
+const btnVerMenos = document.getElementById("verMenosCat")
+const catalogosVer = document.querySelectorAll(".catalogoVer")
+
+btnVerMas.addEventListener("click", () => {
+    btnVerMas.style.display = "none"
+    btnVerMenos.style.display = "block"
+    catalogosVer.forEach((catalago) => {
+        catalago.style.display = "flex"
+    })
+})
+
+btnVerMenos.addEventListener("click", () => {
+    btnVerMas.style.display = "block"
+    btnVerMenos.style.display = "none"
+    catalogosVer.forEach((catalago) => {
+        catalago.style.display = "none"
+    })
+})
