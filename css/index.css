@@ -565,6 +565,7 @@ header {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    container-type: inline-size;
 }
 
 .catalogo img {
@@ -598,7 +599,7 @@ header {
     left: 5%;
     bottom: 15%;
     transition: all 0.4s ease;
-    font-size: clamp(1.1rem, 1.25rem, 1.4rem);
+    font-size: clamp(1.1rem, 5.6cqw, 1.4rem);
 }
 
 .catalogo:hover h3 {
@@ -608,7 +609,7 @@ header {
 .catalogo p {
     left: 5%;
     bottom: 7.5%;
-    font-size: clamp(.8rem, .9rem, 1rem);
+    font-size: clamp(.8rem, 4cqw, 1.3rem);
     opacity: 0;
     visibility: hidden;
     transform: translateY(40%);
@@ -629,6 +630,7 @@ header {
     border-bottom: 1px solid #f9792d;
     padding-bottom: 1px;
     transition: all 0.2s ease;
+    font-size: clamp(.9rem, 3.5cqw, 1.4rem);
 }
 
 .catalogo a:hover {
@@ -663,6 +665,7 @@ header {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    container-type: inline-size;
 }
 
 .catalogoVer img {
@@ -686,7 +689,7 @@ header {
     left: 5%;
     bottom: 15%;
     transition: all 0.4s ease;
-    font-size: clamp(1.1rem, 1.25rem, 1.4rem);
+    font-size: clamp(1.1rem, 5.6cqw, 1.4rem);
 }
 
 .catalogoVer:hover h3 {
@@ -696,7 +699,7 @@ header {
 .catalogoVer p {
     left: 5%;
     bottom: 7.5%;
-    font-size: clamp(.8rem, .9rem, 1rem);
+    font-size: clamp(.8rem, 4cqw, 1.3rem);
     opacity: 0;
     visibility: hidden;
     transform: translateY(40%);
@@ -717,6 +720,7 @@ header {
     border-bottom: 1px solid #f9792d;
     padding-bottom: 1px;
     transition: all 0.2s ease;
+    font-size: clamp(.9rem, 3.5cqw, 1.4rem);
 }
 
 .catalogoVer a:hover {
@@ -765,10 +769,47 @@ header {
     }
 
     .catalogos {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-    justify-items: center;
-    gap: 1rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+        justify-items: center;
+        gap: 1rem;
+    }
+
+    .catalogoVer p {
+        left: 5%;
+        bottom: 8.5%;
+        font-size: 1rem;
+        font-weight: 100;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(40%);
+        transition: all 0.4s ease;
+    }
+
+    .catalogoVer:hover p {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .catalogoVer h3 {
+        left: 5%;
+        bottom: 15%;
+        transition: all 0.4s ease;
+    }
+
+    .catalogoVer:hover h3 {
+        bottom: 25%;
+    }
+}
+
+@media (min-width: 592px) {
+    .btnVerCat, .btnVerMenosCat, .verCat, .verMenosCat {
+        display: none;
+    }
+
+    .catalogoVer {
+        display: flex;
     }
 }
