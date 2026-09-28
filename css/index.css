@@ -813,3 +813,60 @@ header {
         display: flex;
     }
 }
+
+/* -----------------------------------------------------------------------------------------------------*/
+
+.brandeo {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.brandeoTitulo {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.brandeoTitulo h2, p {
+    text-align: center;
+}
+
+.brandeoTitulo span {
+    color: #f9792d;
+}
+
+.brandeoSeleccionar {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.brandeoSeleccionar button {
+    background-color: #f9792d;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.brandeo ul {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brandeo li {
+    list-style: none;
+}
+
+.bordado, .grabadoLaser, .dtfTextil, .dtfUV, .vinil {
+    display: none;
+}
