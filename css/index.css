@@ -615,6 +615,7 @@ header {
     transform: translateY(40%);
     transition: all 0.4s ease;
     font-weight: 100;
+    text-align: start;
 }
 
 .catalogo:hover p {
@@ -705,6 +706,7 @@ header {
     transform: translateY(40%);
     transition: all 0.4s ease;
     font-weight: 100;
+    text-align: start;
 }
 
 .catalogoVer:hover p {
@@ -820,6 +822,7 @@ header {
     width: 100%;
     display: flex;
     flex-flow: column wrap;
+    gap: 1rem;
 }
 
 .brandeoTitulo {
@@ -844,6 +847,8 @@ header {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .brandeoSeleccionar button {
@@ -852,6 +857,7 @@ header {
     border: none;
     border-radius: 1rem;
     padding: 1rem;
+    cursor: pointer;
 }
 
 .brandeo ul {
@@ -869,4 +875,62 @@ header {
 
 .bordado, .grabadoLaser, .dtfTextil, .dtfUV, .vinil {
     display: none;
+}
+
+.bordado.active, .grabadoLaser.active, .dtfTextil.active, .dtfUV.active, .vinil.active, .serigrafia {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.bordadoContenido, .grabadoLaserContenido, .dtfTextilContenido, .dtfUVContenido, .vinilContenido, .serigrafiaContenido {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.bordadoContenido ul, .grabadoLaserContenido ul, .dtfTextilContenido ul, .dtfUVContenido ul, .vinilContenido ul, .serigrafiaContenido ul {
+    display: flex;
+    width: 60%;
+    flex-flow: column wrap;
+    text-align: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.bordadoContenido li, .grabadoLaserContenido li, .dtfTextilContenido li, .dtfUVContenido li, .vinilContenido li, .serigrafiaContenido li {
+    list-style: disc;
+    text-align: start;
+}
+
+.bordado.active img, .grabadoLaser.active img, .dtfTextil.active img, .dtfUV.active img, .vinil.active img, .serigrafia img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1.6rem;
+}
+
+.bordadoContenido a, .grabadoLaserContenido a, .dtfTextilContenido a, .dtfUVContenido a, .vinilContenido a, .serigrafiaContenido a {
+    background-color: #344264;
+    border: none;
+    border-radius: 2rem;
+    padding: clamp(.8rem, 2.8vw, 1.8rem);
+    color: white;
+    cursor: pointer;
+    box-shadow: inset -7px -5px rgba(0, 0, 0, .5);
+    font-size: clamp(.8rem, 2.8vw, 1.8rem);
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.bordadoContenido a:hover, .grabadoLaserContenido a:hover, .dtfTextilContenido a:hover, .dtfUVContenido a:hover, .vinilContenido a:hover, .serigrafiaContenido a:hover {
+    filter: brightness(70%);
 }
