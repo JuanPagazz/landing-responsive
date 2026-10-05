@@ -823,6 +823,7 @@ header {
     display: flex;
     flex-flow: column wrap;
     gap: 1rem;
+    padding-top: 1.6rem;
 }
 
 .brandeoTitulo {
@@ -837,6 +838,14 @@ header {
 
 .brandeoTitulo h2, p {
     text-align: center;
+}
+
+.brandeoTitulo h2 {
+    font-size: clamp(1.4rem, 5.2vw, 3.8rem);
+}
+
+.brandeoTitulo p {
+    font-size: clamp(.9rem, 3.4vw, 2.8rem);
 }
 
 .brandeoTitulo span {
@@ -856,7 +865,8 @@ header {
     color: white;
     border: none;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: clamp(.8rem, 2.8vw, 1.8rem);
+    font-size: clamp(.8rem, 2.8vw, 1.8rem);
     cursor: pointer;
 }
 
@@ -871,13 +881,14 @@ header {
 
 .brandeo li {
     list-style: none;
+    font-size: clamp(.9rem, 3.4vw, 2.8rem);
 }
 
-.bordado, .grabadoLaser, .dtfTextil, .dtfUV, .vinil {
+.bordado, .grabadoLaser, .dtfTextil, .dtfUV, .vinil, .serigrafia {
     display: none;
 }
 
-.bordado.active, .grabadoLaser.active, .dtfTextil.active, .dtfUV.active, .vinil.active, .serigrafia {
+.bordado.active, .grabadoLaser.active, .dtfTextil.active, .dtfUV.active, .vinil.active, .serigrafia.active {
     width: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -909,10 +920,19 @@ header {
 .bordadoContenido li, .grabadoLaserContenido li, .dtfTextilContenido li, .dtfUVContenido li, .vinilContenido li, .serigrafiaContenido li {
     list-style: disc;
     text-align: start;
+    font-size: clamp(.9rem, 3.4vw, 2.8rem);
 }
 
-.bordado.active img, .grabadoLaser.active img, .dtfTextil.active img, .dtfUV.active img, .vinil.active img, .serigrafia img {
-    width: 80%;
+.bordadoContenido h2, .grabadoLaserContenido h2, .dtfTextilContenido h2, .dtfUVContenido h2, .vinilContenido h2, .serigrafiaContenido h2 {
+    font-size: clamp(1.3rem, 5.2vw, 3.8rem);
+}
+
+.bordadoContenido p, .grabadoLaserContenido p, .dtfTextilContenido p, .dtfUVContenido p, .vinilContenido p, .serigrafiaContenido p {
+    font-size: clamp(.9rem, 3.4vw, 2.8rem);
+}
+
+.bordado.active img, .grabadoLaser.active img, .dtfTextil.active img, .dtfUV.active img, .vinil.active img, .serigrafia.active img {
+    width: 65%;
     height: auto;
     object-fit: cover;
     border-radius: 1.6rem;
@@ -933,4 +953,57 @@ header {
 
 .bordadoContenido a:hover, .grabadoLaserContenido a:hover, .dtfTextilContenido a:hover, .dtfUVContenido a:hover, .vinilContenido a:hover, .serigrafiaContenido a:hover {
     filter: brightness(70%);
+}
+
+@media (min-width: 950px) {
+    .bordado.active, .grabadoLaser.active, .dtfTextil.active, .dtfUV.active, .vinil.active, .serigrafia.active {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.bordadoContenido, .grabadoLaserContenido, .dtfTextilContenido, .dtfUVContenido, .vinilContenido, .serigrafiaContenido {
+    width: 55%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.bordado.active img, .grabadoLaser.active img, .dtfTextil.active img, .dtfUV.active img, .vinil.active img, .serigrafia.active img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1.6rem;
+}
+
+.brandeo {
+    padding-top: 2rem;
+}
+
+.brandeoTitulo h2, .bordadoContenido h2, .grabadoLaserContenido h2, .dtfTextilContenido h2, .dtfUVContenido h2, .vinilContenido h2, .serigrafiaContenido h2 {
+    font-size: clamp(1.75rem, 2.8vw, 3rem);
+}
+
+.brandeoTitulo p, .brandeo li, .bordadoContenido p, .bordadoContenido li, .grabadoLaserContenido p, .grabadoLaserContenido li, .dtfTextilContenido p, .dtfTextilContenido li, .dtfUVContenido p, .dtfUVContenido li, .vinilContenido p, .vinilContenido li, .serigrafiaContenido p, .serigrafiaContenido li {
+    font-size: clamp(1.1rem, 1.6vw, 1.7rem);
+}
+
+.brandeoSeleccionar button {
+    padding: clamp(.95rem, 1.2vw, 1.35rem);
+    font-size: clamp(.95rem, 1.2vw, 1.35rem);
+}
+
+.bordadoContenido a, .grabadoLaserContenido a, .dtfTextilContenido a, .dtfUVContenido a, .vinilContenido a, .serigrafiaContenido a {
+    padding: clamp(.95rem, 1.2vw, 1.35rem);
+    font-size: clamp(.95rem, 1.2vw, 1.35rem);
+    box-shadow: inset -9px -7px rgba(0, 0, 0, .5);
+}
 }
