@@ -110,3 +110,73 @@ btnVerMenos.addEventListener("click", () => {
         catalago.style.display = "none"
     })
 })
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+const serigrafiaBtn = document.getElementById("serigrafia")
+const bordadoBtn = document.getElementById("bordado")
+const grabadoLaserBtn = document.getElementById("grabadoLaser")
+const dtfTextilBtn = document.getElementById("dtfTextil")
+const dtfUVBtn = document.getElementById("dtfUV")
+const vinilBtn = document.getElementById("vinil")
+
+const serigrafia = document.querySelector(".serigrafia")
+const bordado = document.querySelector(".bordado")
+const grabadoLaser = document.querySelector(".grabadoLaser")
+const dtfTextil = document.querySelector(".dtfTextil")
+const dtfUV = document.querySelector(".dtfUV")
+const vinil = document.querySelector(".vinil")
+
+serigrafiaBtn.addEventListener("click", () => {
+    serigrafia.classList.toggle("active")
+    bordado.classList.remove("active")
+    grabadoLaser.classList.remove("active")
+    dtfTextil.classList.remove("active")
+    dtfUV.classList.remove("active")
+    vinil.classList.remove("active")
+})
+
+bordadoBtn.addEventListener("click", () => {
+    serigrafia.classList.remove("active")
+    bordado.classList.toggle("active")
+    grabadoLaser.classList.remove("active")
+    dtfTextil.classList.remove("active")
+    dtfUV.classList.remove("active")
+    vinil.classList.remove("active")
+})
+
+grabadoLaserBtn.addEventListener("click", () => {
+    serigrafia.classList.remove("active")
+    bordado.classList.remove("active")
+    grabadoLaser.classList.toggle("active")
+    dtfTextil.classList.remove("active")
+    dtfUV.classList.remove("active")
+    vinil.classList.remove("active")
+}) 
+
+dtfTextilBtn.addEventListener("click", () => {
+    serigrafia.classList.remove("active")
+    bordado.classList.remove("active")
+    grabadoLaser.classList.remove("active")
+    dtfTextil.classList.toggle("active")
+    dtfUV.classList.remove("active")
+    vinil.classList.remove("active")
+}) 
+
+dtfUVBtn.addEventListener("click", () => {
+    serigrafia.classList.remove("active")
+    bordado.classList.remove("active")
+    grabadoLaser.classList.remove("active")
+    dtfTextil.classList.remove("active")
+    dtfUV.classList.toggle("active")
+    vinil.classList.remove("active")
+}) 
+
+vinilBtn.addEventListener("click", () => {
+    serigrafia.classList.remove("active")
+    bordado.classList.remove("active")
+    grabadoLaser.classList.remove("active")
+    dtfTextil.classList.remove("active")
+    dtfUV.classList.remove("active")
+    vinil.classList.toggle("active")
+}) 
