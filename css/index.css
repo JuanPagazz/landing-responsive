@@ -890,6 +890,8 @@ header {
 
 .bordado, .grabadoLaser, .dtfTextil, .dtfUV, .vinil, .serigrafia {
     display: none;
+    scroll-margin-top: 120px;
+    scroll-margin-top: 120px;
 }
 
 .bordado.active, .grabadoLaser.active, .dtfTextil.active, .dtfUV.active, .vinil.active, .serigrafia.active {

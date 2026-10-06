@@ -134,6 +134,11 @@ serigrafiaBtn.addEventListener("click", () => {
     dtfTextil.classList.remove("active")
     dtfUV.classList.remove("active")
     vinil.classList.remove("active")
+
+    serigrafia.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
 })
 
 bordadoBtn.addEventListener("click", () => {
@@ -143,6 +148,11 @@ bordadoBtn.addEventListener("click", () => {
     dtfTextil.classList.remove("active")
     dtfUV.classList.remove("active")
     vinil.classList.remove("active")
+    
+    bordado.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
 })
 
 grabadoLaserBtn.addEventListener("click", () => {
@@ -152,6 +162,11 @@ grabadoLaserBtn.addEventListener("click", () => {
     dtfTextil.classList.remove("active")
     dtfUV.classList.remove("active")
     vinil.classList.remove("active")
+
+    grabadoLaser.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
 }) 
 
 dtfTextilBtn.addEventListener("click", () => {
@@ -161,6 +176,11 @@ dtfTextilBtn.addEventListener("click", () => {
     dtfTextil.classList.toggle("active")
     dtfUV.classList.remove("active")
     vinil.classList.remove("active")
+
+    dtfTextil.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
 }) 
 
 dtfUVBtn.addEventListener("click", () => {
@@ -170,6 +190,11 @@ dtfUVBtn.addEventListener("click", () => {
     dtfTextil.classList.remove("active")
     dtfUV.classList.toggle("active")
     vinil.classList.remove("active")
+
+    dtfUV.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
 }) 
 
 vinilBtn.addEventListener("click", () => {
@@ -179,4 +204,9 @@ vinilBtn.addEventListener("click", () => {
     dtfTextil.classList.remove("active")
     dtfUV.classList.remove("active")
     vinil.classList.toggle("active")
+
+    vinil.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
 }) 
