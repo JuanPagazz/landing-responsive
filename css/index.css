@@ -475,10 +475,9 @@ header {
 
     .texto-contacto {
         width: 50%;
-        height: 80%;
         justify-content: center;
         gap: 1.6rem;
-        justify-content: center;
+        padding-top: 3%;
     }
 
     .contacto h2, .texto-decorativo h2 {
@@ -517,6 +516,11 @@ header {
     }
 }
 
+@media (min-width: 1325px) {
+    .texto-contacto {
+        padding-top: 0;
+    }
+}
 /* ------------------------------------------------------------------------------------------------ */
 
 .temporada {
