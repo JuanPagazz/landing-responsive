@@ -128,7 +128,7 @@ const dtfUV = document.querySelector(".dtfUV")
 const vinil = document.querySelector(".vinil")
 
 serigrafiaBtn.addEventListener("click", () => {
-    serigrafia.classList.toggle("active")
+    serigrafia.classList.add("active")
     bordado.classList.remove("active")
     grabadoLaser.classList.remove("active")
     dtfTextil.classList.remove("active")
@@ -143,7 +143,7 @@ serigrafiaBtn.addEventListener("click", () => {
 
 bordadoBtn.addEventListener("click", () => {
     serigrafia.classList.remove("active")
-    bordado.classList.toggle("active")
+    bordado.classList.add("active")
     grabadoLaser.classList.remove("active")
     dtfTextil.classList.remove("active")
     dtfUV.classList.remove("active")
@@ -158,7 +158,7 @@ bordadoBtn.addEventListener("click", () => {
 grabadoLaserBtn.addEventListener("click", () => {
     serigrafia.classList.remove("active")
     bordado.classList.remove("active")
-    grabadoLaser.classList.toggle("active")
+    grabadoLaser.classList.add("active")
     dtfTextil.classList.remove("active")
     dtfUV.classList.remove("active")
     vinil.classList.remove("active")
@@ -173,7 +173,7 @@ dtfTextilBtn.addEventListener("click", () => {
     serigrafia.classList.remove("active")
     bordado.classList.remove("active")
     grabadoLaser.classList.remove("active")
-    dtfTextil.classList.toggle("active")
+    dtfTextil.classList.add("active")
     dtfUV.classList.remove("active")
     vinil.classList.remove("active")
 
@@ -188,7 +188,7 @@ dtfUVBtn.addEventListener("click", () => {
     bordado.classList.remove("active")
     grabadoLaser.classList.remove("active")
     dtfTextil.classList.remove("active")
-    dtfUV.classList.toggle("active")
+    dtfUV.classList.add("active")
     vinil.classList.remove("active")
 
     dtfUV.scrollIntoView({
@@ -203,7 +203,7 @@ vinilBtn.addEventListener("click", () => {
     grabadoLaser.classList.remove("active")
     dtfTextil.classList.remove("active")
     dtfUV.classList.remove("active")
-    vinil.classList.toggle("active")
+    vinil.classList.add("active")
 
     vinil.scrollIntoView({
         behavior: "smooth",
