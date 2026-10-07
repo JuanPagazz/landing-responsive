@@ -459,7 +459,7 @@ header {
     z-index: 2;
 }
 
-@media (min-width:950px) {
+@media (min-width:905px) {
     .contacto {
         flex-direction: row;
         flex-wrap: wrap;
@@ -960,7 +960,7 @@ header {
     filter: brightness(70%);
 }
 
-@media (min-width: 950px) {
+@media (min-width: 905px) {
     .bordado.active, .grabadoLaser.active, .dtfTextil.active, .dtfUV.active, .vinil.active, .serigrafia.active {
     width: 100%;
     display: flex;
@@ -1072,4 +1072,48 @@ header {
         -webkit-transform: scaleX(calc(-40vw * 14));
         transform: translateX(calc(-40vw * 14));
     }
+}
+
+@media (min-width: 650px) {
+    .sliderTrack img{
+        width: calc(28vw - 2rem);
+    }
+
+    @keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: scaleX(calc(-28vw * 14));
+        transform: translateX(calc(-28vw * 14));
+    }
+}
+}
+
+@media (min-width: 905px) {
+    .sliderText h2 {
+        font-size: clamp(2rem, 3.6vw, 3rem);
+    }
+
+    .sliderText p {
+        font-size: clamp(.95rem, 3vw, 1.4rem);
+    }
+
+    .sliderTrack img {
+        width: calc(17.6vw - 2rem);
+    }
+    
+    @keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: scaleX(calc(-17.6vw * 14));
+        transform: translateX(calc(-17.6vw * 14));
+    }
+}
 }
