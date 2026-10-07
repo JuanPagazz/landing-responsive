@@ -45,12 +45,7 @@ function moverderecha() {
     actualizarPuntoActivo()
 }
 
-flechaD.addEventListener("click", () => {
-    moverderecha()
-    reiniciarContador()
-})
-
-flechaI.addEventListener("click", () => {
+function moverizquierda() {
     contadorimg--
     if(contadorimg < 0) {
         contadorimg = cantimg - 1
@@ -62,6 +57,38 @@ flechaI.addEventListener("click", () => {
     contenedorTarjetas.style.transition = "all .6s ease"
 
     actualizarPuntoActivo()
+}
+
+flechaD.addEventListener("click", () => {
+    moverderecha()
+    reiniciarContador()
+})
+
+flechaI.addEventListener("click", () => {
+    moverizquierda()
+    reiniciarContador()
+})
+
+let inicioX = 0
+let finalX = 0
+
+contenedorTarjetas.addEventListener("touchstart", (evento) => {
+    inicioX = evento.touches[0].clientX
+})
+
+contenedorTarjetas.addEventListener("touchend", (evento) => {
+    finalX = evento.changedTouches[0].clientX
+
+    const diferencia = inicioX - finalX
+
+    if(Math.abs(diferencia) < 50) return
+
+    if(diferencia > 0) {
+        moverderecha()
+    } else {
+        moverizquierda()
+    }
+
     reiniciarContador()
 })
 

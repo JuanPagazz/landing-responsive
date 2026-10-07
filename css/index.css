@@ -322,6 +322,16 @@ header {
     background-color: #f9792d;
 }
 
+@media (max-width: 905px) {
+    .carrusel-tarjetas {
+        touch-action: pan-y;
+    }
+
+    .flecha {
+        display: none;
+    }
+}
+
 /* ------------------------------------------------------------------------------------------ */
 
 .contacto {
