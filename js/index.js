@@ -137,7 +137,7 @@ serigrafiaBtn.addEventListener("click", () => {
 
     serigrafia.scrollIntoView({
         behavior: "smooth",
-        block: "start"
+        block: "center"
     })
 })
 
@@ -151,7 +151,7 @@ bordadoBtn.addEventListener("click", () => {
     
     bordado.scrollIntoView({
         behavior: "smooth",
-        block: "start"
+        block: "center"
     })
 })
 
@@ -165,7 +165,7 @@ grabadoLaserBtn.addEventListener("click", () => {
 
     grabadoLaser.scrollIntoView({
         behavior: "smooth",
-        block: "start"
+        block: "center"
     })
 }) 
 
@@ -179,7 +179,7 @@ dtfTextilBtn.addEventListener("click", () => {
 
     dtfTextil.scrollIntoView({
         behavior: "smooth",
-        block: "start"
+        block: "center"
     })
 }) 
 
@@ -193,7 +193,7 @@ dtfUVBtn.addEventListener("click", () => {
 
     dtfUV.scrollIntoView({
         behavior: "smooth",
-        block: "start"
+        block: "center"
     })
 }) 
 
@@ -207,6 +207,6 @@ vinilBtn.addEventListener("click", () => {
 
     vinil.scrollIntoView({
         behavior: "smooth",
-        block: "start"
+        block: "center"
     })
 }) 
