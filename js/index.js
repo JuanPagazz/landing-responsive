@@ -1,6 +1,14 @@
 const btnabrir = document.getElementById("abrir-menu")
 const btncerrar = document.getElementById("cerrar-menu")
 const nav = document.getElementById("nav")
+const navButtons = document.querySelectorAll(".btnNav")
+
+navButtons.forEach((navButton) => {
+    navButton.addEventListener("click", () => {
+        nav.classList.remove("active")
+    })
+})
+
 
 btnabrir.addEventListener("click", () => {
     nav.classList.toggle("active")
