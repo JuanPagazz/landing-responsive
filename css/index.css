@@ -206,12 +206,16 @@ header {
     height: 100%;
     width: calc(100% / 5);
     display: flex;
+    flex: 0 0 calc(100% / 5);
     position: relative;
     align-items: center;
     justify-content: center;
+    isolation: isolate;
 }
 
 .tarjetas img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: fill;
@@ -223,7 +227,7 @@ header {
     position: absolute;
     font-family: sans-serif;
     color: white;
-    z-index: 1;
+    z-index: 2;
 }
 
 .tarjetas h2 {
@@ -239,6 +243,7 @@ header {
 }
 
 .tarjetas a {
+    display: inline-block;
     left: 10%;
     bottom: 25%;
     border: none;
