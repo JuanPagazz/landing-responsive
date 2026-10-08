@@ -235,7 +235,7 @@ header {
 .tarjetas p {
     left: 10%;
     top: 45%;
-    font-size: clamp(1.2rem, 2.2vw, 2.4rem);
+    font-size: clamp(1.3rem, 2.2vw, 2.4rem);
 }
 
 .tarjetas button {
@@ -322,6 +322,10 @@ header {
     background-color: #f9792d;
 }
 
+.cell {
+    display: none;
+}
+
 @media (max-width: 905px) {
     .carrusel-tarjetas {
         touch-action: pan-y;
@@ -330,6 +334,14 @@ header {
     .flecha {
         display: none;
     }
+
+    .cell {
+        display: block;
+    }
+    
+    .pc {
+        display: none;
+     }
 }
 
 /* ------------------------------------------------------------------------------------------ */
