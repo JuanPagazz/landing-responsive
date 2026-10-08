@@ -1256,3 +1256,15 @@ footer h4 {
         width: 26%;
     }
 }
+
+/* ----------------------------------------------------------------------------------------------- */
+
+.stickyWsp {
+    position: fixed;
+    right: clamp(1rem, 3vw, 2rem);
+    bottom: clamp(1rem, 3vw, 2rem);
+    width: clamp(5.2rem, 9.6vw, 10rem);
+    height: auto;
+    z-index: 100;
+    filter: brightness(95%);
+}
