@@ -219,7 +219,7 @@ header {
     filter: brightness(70%);
 }
 
-.tarjetas h2, .tarjetas p, .tarjetas button {
+.tarjetas h2, .tarjetas p, .tarjetas a {
     position: absolute;
     font-family: sans-serif;
     color: white;
@@ -238,10 +238,11 @@ header {
     font-size: clamp(1.3rem, 2.2vw, 2.4rem);
 }
 
-.tarjetas button {
+.tarjetas a {
     left: 10%;
     bottom: 25%;
     border: none;
+    text-decoration: none;
     background-color: #f9792d;
     border-radius: 12px;
     padding: 1.1rem 1.8rem 1.1rem 1.1rem;
