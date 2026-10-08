@@ -1147,7 +1147,7 @@ footer {
 }
 
 .logoFoot img {
-    width: 25%;
+    width: 20%;
     object-fit: cover;
 }
 
@@ -1162,10 +1162,16 @@ footer {
 footer h4 {
     color: #f9792d;
     letter-spacing: .05em;
+    font-size: clamp(1.1rem, 3.4vw, 2rem);
+}
+
+.navegacionFoot a,
+.contactosFoot a {
+    color: #f1f1f1;
+    font-size: clamp(.8rem, 2.8vw, 1.8rem);
 }
 
 .navegacionFoot a {
-    color: #f1f1f1;
     text-decoration: none;
 }
 
@@ -1187,11 +1193,7 @@ footer h4 {
 }
 
 .contactoFoot img {
-    width: 8%;
-}
-
-.contactosFoot a {
-    color: #f1f1f1;
+    width: 6%;
 }
 
 .siguenosFoot {
@@ -1208,4 +1210,49 @@ footer h4 {
 
 .siguenosFoot img {
     width: 12%;
+}
+
+@media (min-width:905px) {
+    footer {
+        flex-flow: row wrap;
+        justify-content: start;
+        padding: 1rem 0;
+    }
+
+    footer h4 {
+        font-size: clamp(1.1rem, 1.6vw, 1.7rem);
+    }
+
+    .navegacionFoot a,
+    .contactosFoot a {
+        font-size: clamp(.90rem, 1.2vw, 1.35rem);
+    }
+    
+    .navegacionFoot, .contactosFoot, .siguenosFoot {
+        width: 25%;
+        padding: 0;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .logoFoot {
+        width: 18%;
+        padding-left: 1rem;
+    }
+
+    .logoFoot img {
+        width: 50%;
+    }
+
+    .siguenosFoot img {
+        width: 20%;
+    }
+
+    .contactoFoot img {
+        width: 9%;
+    }
+
+    .contactosFoot {
+        width: 26%;
+    }
 }
