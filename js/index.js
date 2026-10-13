@@ -5,17 +5,36 @@ const navButtons = document.querySelectorAll(".btnNav")
 
 navButtons.forEach((navButton) => {
     navButton.addEventListener("click", () => {
-        nav.classList.remove("active")
+        cerrarMenu()
     })
 })
 
+function abrirMenu() {
+    nav.classList.add("active")
+    btnabrir.setAttribute("aria-expanded", "true")
+}
+
+function cerrarMenu() {
+    nav.classList.remove("active")
+    btnabrir.setAttribute("aria-expanded", "false")
+}
 
 btnabrir.addEventListener("click", () => {
-    nav.classList.toggle("active")
+    if (nav.classList.contains("active")) {
+        cerrarMenu()
+    } else {
+        abrirMenu()
+    }
 })
 
 btncerrar.addEventListener("click", () => {
-    nav.classList.remove("active")
+    cerrarMenu()
+})
+
+document.addEventListener("keydown", (evento) => {
+    if (evento.key === "Escape") {
+        cerrarMenu()
+    }
 })
 
 /* ------------------------------------------------------------------------------------------------------- */
@@ -95,7 +114,7 @@ contenedorTarjetas.addEventListener("touchend", (evento) => {
 const puntos = document.querySelectorAll(".punto")
 
 puntos.forEach((punto, indice) => {
-    puntos[indice].addEventListener("click", () => {
+    const seleccionarPunto = () => {
         contadorimg = indice
         operacionf = contadorimg * anchoimg
 
@@ -104,15 +123,25 @@ puntos.forEach((punto, indice) => {
 
         actualizarPuntoActivo()
         reiniciarContador()
+    }
+
+    punto.addEventListener("click", seleccionarPunto)
+    punto.addEventListener("keydown", (evento) => {
+        if (evento.key === "Enter" || evento.key === " ") {
+            evento.preventDefault()
+            seleccionarPunto()
+        }
     })
 })
 
 function actualizarPuntoActivo() {
     puntos.forEach((punto) => {
         punto.classList.remove("active")
+        punto.removeAttribute("aria-current")
     })
 
     puntos[contadorimg].classList.add("active")
+    puntos[contadorimg].setAttribute("aria-current", "true")
 }
 
 let carruselAutomatico

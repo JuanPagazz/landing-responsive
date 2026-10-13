@@ -12,8 +12,8 @@
 <body>
     <header>
         <img src="assets/pglogo_nf.png" class="logo" alt="Logo">
-        <button class="abrir-menu" id="abrir-menu" type="button" aria-label="Abrir menú">☰</button>
-        <nav class="nav" id="nav">
+        <button class="abrir-menu" id="abrir-menu" type="button" aria-label="Abrir menú" aria-controls="nav" aria-expanded="false">☰</button>
+        <nav class="nav" id="nav" aria-label="Navegación principal">
             <button class="cerrar-menu" id="cerrar-menu" type="button" aria-label="Cerrar menú">✕</button>
             <ul class="nav-list">
                 <li><a href="#carrusel" class="btnNav">Servicios</a></li>
@@ -23,13 +23,13 @@
                 <li><a href="#clientes" class="btnNav">Clientes</a></li>
             </ul>
             <div class="redes-responsive">  
-            <a href="https://www.facebook.com/profile.php?id=61563220529808&locale=es_LA" target="blank_"><img src="assets/facebook.png" class="fb" alt="Facebook"></a>
-            <a href="https://www.linkedin.com/company/pgpublicidad/" target="blank_"><img src="assets/linkedin.png" class="in" alt="Linkedin"></a>
+            <a href="https://www.facebook.com/profile.php?id=61563220529808&locale=es_LA" target="_blank" rel="noopener noreferrer"><img src="assets/facebook.png" class="fb" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/company/pgpublicidad/" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin.png" class="in" alt="Linkedin"></a>
             </div>
         </nav>
         <div class="redes">
-            <a href="https://www.facebook.com/profile.php?id=61563220529808&locale=es_LA" target="blank_"><img src="assets/facebook.png" class="fb" alt="Facebook"></a>
-            <a href="https://www.linkedin.com/company/pgpublicidad/" target="blank_"><img src="assets/linkedin.png" class="in" alt="Linkedin"></a>
+            <a href="https://www.facebook.com/profile.php?id=61563220529808&locale=es_LA" target="_blank" rel="noopener noreferrer"><img src="assets/facebook.png" class="fb" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/company/pgpublicidad/" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin.png" class="in" alt="Linkedin"></a>
         </div>
     </header>
     <section class="carrusel" id="carrusel" tabindex="0">
@@ -71,16 +71,16 @@
             </div>
         </div>
         <div class="carrusel-flechas">
-            <a class="flecha" id="flecha-izquierda">❮</a>
-            <a class="flecha" id="flecha-derecha">❯</a>
+            <button class="flecha" id="flecha-izquierda" type="button" aria-label="Servicio anterior">❮</button>
+            <button class="flecha" id="flecha-derecha" type="button" aria-label="Siguiente servicio">❯</button>
         </div>
         <div class="carrusel-puntos">
             <ul class="puntos">
-                <li class="punto active"></li>
-                <li class="punto"></li>
-                <li class="punto"></li>
-                <li class="punto"></li>
-                <li class="punto"></li>
+                <li class="punto active" role="button" tabindex="0" aria-label="Mostrar servicio 1" aria-current="true"></li>
+                <li class="punto" role="button" tabindex="0" aria-label="Mostrar servicio 2"></li>
+                <li class="punto" role="button" tabindex="0" aria-label="Mostrar servicio 3"></li>
+                <li class="punto" role="button" tabindex="0" aria-label="Mostrar servicio 4"></li>
+                <li class="punto" role="button" tabindex="0" aria-label="Mostrar servicio 5"></li>
             </ul>
         </div>
     </section>
